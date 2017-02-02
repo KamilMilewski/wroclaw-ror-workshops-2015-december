@@ -14,6 +14,9 @@ class TeachersController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   def update
     if teacher.save
       redirect_to teacher_path(teacher), notice: I18n.t('shared.updated', resource: 'Teacher')
