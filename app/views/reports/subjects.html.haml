@@ -2,7 +2,4 @@
 .subjects
   list of subjects:
   - subject_items.each do |subject_item|
-    .subject-item
-      = subject_item.decorate.title_with_assigned_teacher
-      - subject_item.students.each do |student|
-        = student.decorate.full_name
+    =render 'subject_item', subject_item: subject_item
