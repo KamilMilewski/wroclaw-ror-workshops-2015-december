@@ -22,4 +22,8 @@ class StudentsController < ApplicationController
     student.destroy
     redirect_to students_path, notice: I18n.t('shared.deleted', resource: 'Student')
   end
+
+  private
+
+  def student_params; end
 end
