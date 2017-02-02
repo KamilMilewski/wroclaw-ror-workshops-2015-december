@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :students do
     get :subjects
   end
-  resources :teachers
+  resources :teachers do
+    get :subjects
+  end
   get 'subjects', to: 'reports#subjects', as: :report_subjects
 end
