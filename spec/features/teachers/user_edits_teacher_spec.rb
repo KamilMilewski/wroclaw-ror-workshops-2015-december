@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'User edits teacher spec' do
+feature 'User edits teacher' do
   let!(:teacher) { create :teacher, first_name: 'Pies', last_name: 'Pluto', academic_title: 'Dr.' }
   let!(:subject_item) { create :subject_item, title: 'History of NY' }
 
