@@ -3,6 +3,5 @@ class StudentDecorator < BaseDecorator
     "#{first_name} #{last_name}"
   end
 
-  def avg_notes(subject_item)
-  end
+  def avg_notes(subject_item); end
 end

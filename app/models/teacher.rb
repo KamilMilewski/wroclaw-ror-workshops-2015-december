@@ -1,5 +1,5 @@
 class Teacher < ActiveRecord::Base
-  TITLES = %w(Dr. Prof. TA)
+  TITLES = [%w(Dr. Prof. TA)].freeze
   has_many :subject_items, dependent: :nullify
 
   validates :first_name, :last_name, presence: true

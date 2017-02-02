@@ -44,7 +44,7 @@ RSpec.describe TeachersController do
       end
 
       it 'creates teacher' do
-        expect{ subject }.to change(Teacher, :count).by(1)
+        expect { subject }.to change(Teacher, :count).by(1)
       end
     end
 
@@ -73,7 +73,7 @@ RSpec.describe TeachersController do
 
       context 'updates teacher' do
         subject { -> { put :update, params } }
-        it { is_expected.to change{ teacher.reload.first_name }.to(first_name) }
+        it { is_expected.to change { teacher.reload.first_name }.to(first_name) }
       end
     end
 
@@ -96,7 +96,7 @@ RSpec.describe TeachersController do
     end
 
     it 'destroys teacher' do
-      expect{ subject }.to change(Teacher, :count).by(-1)
+      expect { subject }.to change(Teacher, :count).by(-1)
     end
   end
 end

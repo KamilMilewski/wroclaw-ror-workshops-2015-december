@@ -8,16 +8,16 @@ describe StudentDecorator do
   let!(:note_1) { create :subject_item_note, value: 5, student: student, subject_item: second_subject_item }
   let!(:note_2) { create :subject_item_note, value: 4, student: student, subject_item: second_subject_item }
 
-  describe "#full_name" do
+  describe '#full_name' do
     subject { student.decorate.full_name }
     it { is_expected.to eq 'John Smith' }
   end
 
-  describe "#avg_notes" do
+  describe '#avg_notes' do
     describe "when student doesn't have notes assigned" do
       subject { student.decorate.avg_notes(subject_item) }
 
-      it "returns 0.00" do
+      it 'returns 0.00' do
         is_expected.to eq '0.00'
       end
     end
