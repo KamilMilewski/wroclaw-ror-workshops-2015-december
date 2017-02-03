@@ -1,3 +1,9 @@
+[![Build Status](https://travis-ci.org/KamilMilewski/wroclaw-ror-workshops-2015-december.svg?branch=master)](https://travis-ci.org/KamilMilewski/wroclaw-ror-workshops-2015-december)
+Challenge finished.
+================
+
+You can find working live example [here.](https://netguru-ror-challenge.herokuapp.com/)
+
 RoR Workshops
 ================
 
