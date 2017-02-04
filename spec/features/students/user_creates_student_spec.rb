@@ -2,7 +2,6 @@ require 'spec_helper'
 
 feature 'User creates student' do
   background do
-    create(:subject_item)
     sign_in
     expect(page).to have_content 'Logout'
     visit students_path
@@ -15,10 +14,8 @@ feature 'User creates student' do
     select '2000', from: 'student[birthdate(1i)]'
     select 'January', from: 'student[birthdate(2i)]'
     select '6', from: 'student[birthdate(3i)]'
-    find("input[type='checkbox']").set(true)
     click_button 'Create Student'
     expect(page).to have_content 'Student has been created!'
-    visit report_subjects_path
     expect(page).to have_content 'Adrian'
     expect(page).to have_content 'Nowacki'
     expect(page).to have_content '2000-01-06'
