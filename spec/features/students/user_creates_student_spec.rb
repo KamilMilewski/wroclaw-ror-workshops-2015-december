@@ -8,7 +8,21 @@ feature 'User creates student' do
     click_on 'Add new one'
   end
 
-  scenario 'with valid input' do
+  scenario 'with valid input - birthdate included' do
+    fill_in 'First name', with: 'Adrian'
+    fill_in 'Last name', with: 'Nowacki'
+    select '6', from: 'student[birthdate(1i)]'
+    select 'January', from: 'student[birthdate(2i)]'
+    select '2000', from: 'student[birthdate(3i)]'
+    click_button 'Create Student'
+    expect(page).to have_content 'Student has been created!'
+    visit report_subjects_path
+    expect(page).to have_content 'Adrian'
+    expect(page).to have_content 'Nowacki'
+    expect(page).to have_content '2000-01-06'
+  end
+
+  scenario 'with valid input - withoud birthdate' do
     fill_in 'First name', with: 'Adrian'
     fill_in 'Last name', with: 'Nowacki'
     click_button 'Create Student'
