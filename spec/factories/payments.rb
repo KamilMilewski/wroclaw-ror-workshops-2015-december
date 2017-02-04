@@ -1,9 +1,8 @@
 FactoryGirl.define do
   factory :payment do
-    user nil
-month 1
-year 1
-paid_at "2017-02-04"
+    student nil
+    month 2
+    year 2000
+    paid_at '2000-02-04'
   end
-
 end
