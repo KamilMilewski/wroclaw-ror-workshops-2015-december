@@ -1,5 +1,4 @@
 class PaymentsController < ApplicationController
-  def index
-    
-  end
+  expose(:payments)
+  def index; end
 end

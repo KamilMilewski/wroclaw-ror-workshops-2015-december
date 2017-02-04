@@ -1,2 +1,17 @@
 %h1 Payments#index
-%p Find me in app/views/payments/index.html.haml
+%table#payments.table.display{"data-source" => payments_url(format: "json")}
+  %thead
+    %tr
+      %th First Name
+      %th Last Name
+      %th Year
+      %th Month
+      %th Paid At
+  %tbody
+    -payments.each do |payment|
+      %tr
+        %th= payment.student.first_name
+        %th= payment.student.last_name
+        %th= payment.year
+        %th= payment.month
+        %th= payment.paid_at
