@@ -6,6 +6,7 @@ You can find working live example [here.](https://netguru-ror-challenge.herokuap
 
 ### :cake: Additional tasks completed:
 * student birthdate
+* student payments (with DataTables gem)
 
 RoR Workshops
 ================
