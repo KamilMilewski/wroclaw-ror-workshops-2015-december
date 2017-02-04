@@ -2,11 +2,11 @@
 %table#payments.table.display{"data-source" => payments_url(format: "json")}
   %thead
     %tr
-      %th First Name
-      %th Last Name
-      %th Year
-      %th Month
-      %th Paid At
+      %th= t('payments.columns.first_name')
+      %th= t('payments.columns.last_name')
+      %th= t('payments.columns.year')
+      %th= t('payments.columns.month')
+      %th= t('payments.columns.paid_at')
   %tbody
     -payments.each do |payment|
       %tr
