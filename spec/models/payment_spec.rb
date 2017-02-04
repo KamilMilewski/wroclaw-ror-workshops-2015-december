@@ -8,8 +8,8 @@ RSpec.describe Payment, type: :model do
       should validate_uniqueness_of(:student_id).scoped_to(:year, :month)
     end
     it 'should validate year to be in sensible range' do
-      should validate_numericality_of(:year).is_greater_than(1900)
-        .is_less_than(2100)
+      should validate_numericality_of(:year)
+        .is_greater_than(1900).is_less_than(2100)
     end
     it 'should validate month to be between 1 and 12' do
       should validate_numericality_of(:year).is_greater_than(0)
