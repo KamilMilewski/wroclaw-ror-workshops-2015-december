@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'payments/index'
+
   root 'visitors#index'
   devise_for :users
   resources :students do
