@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'payments/index'
+  get 'payments/index', as: :payments
 
   root 'visitors#index'
   devise_for :users
