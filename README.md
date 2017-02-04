@@ -4,6 +4,9 @@ Challenge finished.
 
 You can find working live example [here.](https://netguru-ror-challenge.herokuapp.com/)
 
+### :cake: Additional tasks completed:
+* student birthdate
+
 RoR Workshops
 ================
 
