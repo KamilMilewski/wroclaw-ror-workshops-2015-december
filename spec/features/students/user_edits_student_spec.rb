@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 feature 'User edits student' do
-  let!(:student) { create :student, first_name: 'Jan', last_name: 'Abacki' }
+  let!(:student) do
+    create :student, first_name: 'Jan',
+                     last_name: 'Abacki',
+                     birthdate: Date.new(2000, 1, 1)
+  end
   let!(:subject_item) { create :subject_item, title: 'Math' }
 
   background do
@@ -19,9 +23,11 @@ feature 'User edits student' do
 
   scenario 'with valid input' do
     fill_in 'First name', with: 'Marcin'
+    select '2005', from: 'student[birthdate(1i)]'
     click_button 'Update Student'
     expect(page).to have_content 'Student has been updated!'
     expect(page).to have_content 'Marcin'
+    expect(page).to have_content '2005-01-01'
   end
 
   scenario 'with invalid input' do
